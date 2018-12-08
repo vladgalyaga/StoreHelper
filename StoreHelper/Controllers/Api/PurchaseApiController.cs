@@ -28,11 +28,11 @@ namespace StoreHelper.Controllers.Api
             {
                 ProductType = new ProductType()
                 {
-                    Id =  1,
+                   // Id =  1,
                     Name =  "nave"
                 },
                 Name =  "ProductName",
-                Id =  1,
+              //  Id =  1,
                 Price = 23423
                 
             });

@@ -25,16 +25,18 @@ namespace StoreHelperDAL
                 .WithOptional(t => t.ProductType);
 
             modelBuilder.Entity<Product>()
-                .HasMany(t => t.Pu)
-                .WithMany(t => t.Participants);
+                .HasMany(t => t.Purchases)
+                .WithMany(t => t.Products);
 
-            //modelBuilder.Entity<User>()
-            //    .HasMany(t => t.CreatedEvents)
-            //    .WithOptional(t => t.Creater);
+            modelBuilder.Entity<Customer>()
+                .HasMany(c => c.Purchases)
+                .WithOptional(p => p.Customer);
+
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
+        public  DbSet<Customer> Customers { get; set; }
         //public DbSet<Performer> Performers { get; set; }
         //public DbSet<Album> Albums { get; set; }
 
