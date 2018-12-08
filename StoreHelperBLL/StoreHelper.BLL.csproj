@@ -45,10 +45,6 @@
     <Compile Include="PurchaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\Straterix.DAL.Core\StoreHelper.DAL.Core.csproj">
-      <Project>{63BDF8A3-86F7-4219-86C9-F51625000A9D}</Project>
-      <Name>StoreHelper.DAL.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\StoreHelper.Common.csproj">
       <Project>{834614a9-088c-4236-956b-0d840525e933}</Project>
       <Name>StoreHelper.Common</Name>
@@ -56,6 +52,10 @@
     <ProjectReference Include="..\StoreHelper.BLL.Contracts\StoreHelper.BLL.Contracts.csproj">
       <Project>{036797db-8cf3-48bd-82dd-26d1c305578a}</Project>
       <Name>StoreHelper.BLL.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoreHelper.DAL.Core\StoreHelper.DAL.Core.csproj">
+      <Project>{63bdf8a3-86f7-4219-86c9-f51625000a9d}</Project>
+      <Name>StoreHelper.DAL.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\StoreHelperDAL\StoreHelper.DAL.csproj">
       <Project>{713ea19a-7352-4f2b-8b4a-4165facbd080}</Project>

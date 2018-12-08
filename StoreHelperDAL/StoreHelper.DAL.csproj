@@ -60,11 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\Straterix.DAL.Core\StoreHelper.DAL.Core.csproj">
+    <ProjectReference Include="..\StoreHelper.DAL.Core\StoreHelper.DAL.Core.csproj">
       <Project>{63bdf8a3-86f7-4219-86c9-f51625000a9d}</Project>
       <Name>StoreHelper.DAL.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
