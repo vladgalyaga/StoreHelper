@@ -1,6 +1,8 @@
 using System;
 using System.Data.Entity;
+using StoreHelper.BLL.Contracts;
 using StoreHelper.Dal.Core.Interfaces;
+using StoreHelperBLL;
 using StoreHelperDAL;
 using Unity;
 
@@ -40,7 +42,7 @@ namespace StoreHelper
         {
             container.RegisterType<DbContext, StoreHelperContext>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
-
+            container.RegisterType<IPurchaseManager, PurchaseManager>();
             // NOTE: To load from web.config uncomment the line below.
             // Make sure to add a Unity.Configuration to the using statements.
             // container.LoadConfiguration();

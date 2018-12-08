@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreHelper.Common", "Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreHelper.DAL.Core", "..\..\..\Desktop\Straterix.DAL.Core\StoreHelper.DAL.Core.csproj", "{63BDF8A3-86F7-4219-86C9-F51625000A9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreHelper.BLL.Contracts", "StoreHelper.BLL.Contracts\StoreHelper.BLL.Contracts.csproj", "{036797DB-8CF3-48BD-82DD-26D1C305578A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{63BDF8A3-86F7-4219-86C9-F51625000A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63BDF8A3-86F7-4219-86C9-F51625000A9D}.SecondDev|Any CPU.ActiveCfg = SecondDev|Any CPU
 		{63BDF8A3-86F7-4219-86C9-F51625000A9D}.SecondDev|Any CPU.Build.0 = SecondDev|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.DevLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.DevLocal|Any CPU.Build.0 = Debug|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.Integration|Any CPU.ActiveCfg = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.Integration|Any CPU.Build.0 = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.QA|Any CPU.Build.0 = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.SecondDev|Any CPU.ActiveCfg = Release|Any CPU
+		{036797DB-8CF3-48BD-82DD-26D1C305578A}.SecondDev|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

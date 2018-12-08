@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoreHelperBLL
+namespace StoreHelper.BLL.Contracts
 {
-    public class Class1
+    public interface IPurchaseManager
     {
     }
 }

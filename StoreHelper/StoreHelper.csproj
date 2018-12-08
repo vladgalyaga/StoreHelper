@@ -304,6 +304,10 @@
       <Project>{834614a9-088c-4236-956b-0d840525e933}</Project>
       <Name>StoreHelper.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StoreHelper.BLL.Contracts\StoreHelper.BLL.Contracts.csproj">
+      <Project>{036797DB-8CF3-48BD-82DD-26D1C305578A}</Project>
+      <Name>StoreHelper.BLL.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StoreHelperBLL\StoreHelper.BLL.csproj">
       <Project>{da9872f4-9858-4dd6-9438-bf2dcfd8eab1}</Project>
       <Name>StoreHelper.BLL</Name>
