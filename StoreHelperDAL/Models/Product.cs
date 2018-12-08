@@ -14,5 +14,6 @@ namespace StoreHelperDAL.Models
         public  double Price { get; set; }
 
         public ProductType ProductType { get; set; }
+        public ICollection<Purchase> Purchases { get; set; }
     }
 }

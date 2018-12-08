@@ -20,13 +20,13 @@ namespace StoreHelperDAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Entity<Chat>()
-            //    .HasMany(t => t.Users)
-            //    .WithMany(t => t.Chats);
+            modelBuilder.Entity<ProductType>()
+                .HasMany(t => t.Products)
+                .WithOptional(t => t.ProductType);
 
-            //modelBuilder.Entity<User>()
-            //    .HasMany(t => t.Events)
-            //    .WithMany(t => t.Participants);
+            modelBuilder.Entity<Product>()
+                .HasMany(t => t.Pu)
+                .WithMany(t => t.Participants);
 
             //modelBuilder.Entity<User>()
             //    .HasMany(t => t.CreatedEvents)
