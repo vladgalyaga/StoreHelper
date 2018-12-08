@@ -20,7 +20,9 @@ namespace StoreHelper.Controllers.Api
             _unitOfWork = unitOfWork;
         }
 
-        public IHttpActionResult AddPurchase(IEnumerable<int> productIds)
+        [HttpGet]
+        [Route("AddPurchase")]
+        public IHttpActionResult AddPurchase()
         {
             _unitOfWork.GetRepository<Product, int>().Create(new Product()
             {
