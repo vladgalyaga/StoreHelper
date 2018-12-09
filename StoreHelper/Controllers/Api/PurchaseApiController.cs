@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Common.ViewModels;
 using StoreHelper.BLL.Contracts;
 using StoreHelper.Dal.Core.Interfaces;
 using StoreHelperDAL.Models;
+using Swashbuckle.Swagger.Annotations;
 
 namespace StoreHelper.Controllers.Api
 {
@@ -21,8 +23,10 @@ namespace StoreHelper.Controllers.Api
             _purchaseManager = purchaseManager;
         }
         
-        [HttpGet]
+        [HttpPost]
         [Route("Make")]
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
+        [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult AddPurchase(IEnumerable<int> productIds)
         {
             var result = _purchaseManager.MakePurchase(productIds.ToList());

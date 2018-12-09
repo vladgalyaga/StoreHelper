@@ -44,6 +44,7 @@ namespace StoreHelperBLL
             };
             _purchaseRepository.Create(purchase);
             var result = GetRecommendedProduct(purchase);
+            result = result ?? new Product();
             return new ProductDto()
             {
                 Id = result.Id,
