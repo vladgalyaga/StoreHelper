@@ -109,7 +109,7 @@ namespace StoreHelperBLL
                 }
             }
 
-            return similarProductCount / divider;
+            return similarProductCount * similarProductCount / divider;
         }
 
         private Dictionary<Product, double> AddSimilarValueToProduct(Dictionary<Product, double> recomendedPropucts,
