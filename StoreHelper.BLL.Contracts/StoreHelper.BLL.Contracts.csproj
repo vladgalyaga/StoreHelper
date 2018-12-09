@@ -44,5 +44,15 @@
     <Compile Include="IPurchaseManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\StoreHelper.Common.csproj">
+      <Project>{834614A9-088C-4236-956B-0D840525E933}</Project>
+      <Name>StoreHelper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoreHelperDAL\StoreHelper.DAL.csproj">
+      <Project>{713EA19A-7352-4F2B-8B4A-4165FACBD080}</Project>
+      <Name>StoreHelper.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

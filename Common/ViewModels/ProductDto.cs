@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common.ViewModels
 {
-    public class NewPurchaseViewModel
+    public class ProductDto
     {
-        public IEnumerable<int> ProductIds { get; set; }
+        public  int Id { get; set; }
+        public string Name { get; set; }
     }
 }

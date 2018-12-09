@@ -308,6 +308,14 @@
       <Project>{036797DB-8CF3-48BD-82DD-26D1C305578A}</Project>
       <Name>StoreHelper.BLL.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StoreHelper.Cache.Contracts\StoreHelper.Cache.Contracts.csproj">
+      <Project>{BD3D35A5-542F-49DD-94DB-C1A9FDF1EC02}</Project>
+      <Name>StoreHelper.Cache.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoreHelper.Cache\StoreHelper.Cache.csproj">
+      <Project>{0A8BB469-37A1-465A-9DEA-69C8E89E174F}</Project>
+      <Name>StoreHelper.Cache</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StoreHelper.DAL.Core\StoreHelper.DAL.Core.csproj">
       <Project>{63bdf8a3-86f7-4219-86c9-f51625000a9d}</Project>
       <Name>StoreHelper.DAL.Core</Name>

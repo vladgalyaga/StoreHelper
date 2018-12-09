@@ -1,7 +1,9 @@
 using System;
 using System.Data.Entity;
 using StoreHelper.BLL.Contracts;
+using StoreHelper.Cache.Contracts;
 using StoreHelper.Dal.Core.Interfaces;
+using StoreHelper.ODA.Cache;
 using StoreHelperBLL;
 using StoreHelperDAL;
 using Unity;
@@ -40,6 +42,8 @@ namespace StoreHelper
         /// </remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
+            container.RegisterType<ICacheService, CacheService>();
+
             container.RegisterType<DbContext, StoreHelperContext>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<IPurchaseManager, PurchaseManager>();
