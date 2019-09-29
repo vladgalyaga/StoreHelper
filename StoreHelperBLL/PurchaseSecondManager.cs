@@ -70,6 +70,12 @@ namespace StoreHelperBLL
 
         public ProductDto MakePurchase(List<long> productIds)
         {
+            Purchase purchase = new Purchase()
+            {
+                Products = GetAProducts().Where(x => productIds.Contains(x.Id)).ToList(),
+            };
+            _purchaseRepository.Create(purchase);
+
             var recomendation = GetRcomendation();
 
             var recomendedProducts = new List<RecomendationProduct>();
@@ -80,7 +86,11 @@ namespace StoreHelperBLL
                   recomendInPurchase.ForEach(r => AddRecomendation(recomendedProducts, r.ProductId, r.Value));
               });
 
-            var productId = recomendedProducts.OrderByDescending(x => x.Value).FirstOrDefault().ProductId;
+            var productId = recomendedProducts
+                .Where(x => !productIds.Contains(x.ProductId))
+                .OrderByDescending(x => x.Value)
+                .FirstOrDefault().ProductId;
+
             var product = _productRepository.GetFirstOrDefault(x => x.Id == productId);
             return new ProductDto()
             {
