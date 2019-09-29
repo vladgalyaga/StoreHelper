@@ -46,7 +46,7 @@ namespace StoreHelper
 
             container.RegisterType<DbContext, StoreHelperContext>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
-            container.RegisterType<IPurchaseManager, PurchaseManager>();
+            container.RegisterType<IPurchaseManager, PurchaseSecondManager>();
             // NOTE: To load from web.config uncomment the line below.
             // Make sure to add a Unity.Configuration to the using statements.
             // container.LoadConfiguration();
