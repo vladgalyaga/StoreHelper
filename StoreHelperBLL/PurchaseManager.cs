@@ -16,14 +16,14 @@ namespace StoreHelperBLL
     {
         private IUnitOfWork _unitOfWork;
         private ICacheService _cacheService;
-        private IRepository<Purchase, int> _purchaseRepository;
+        private IRepository<Purchase, long> _purchaseRepository;
         private const string AllPurhaseCacheKey = "AllPurhaseCacheKey";
 
         public PurchaseManager(IUnitOfWork unitOfWork, ICacheService cacheService)
         {
             _unitOfWork = unitOfWork;
             _cacheService = cacheService;
-            _purchaseRepository = unitOfWork.GetRepository<Purchase, int>();
+            _purchaseRepository = unitOfWork.GetRepository<Purchase, long>();
         }
 
         public List<Purchase> GetAllPurhase()
@@ -33,10 +33,10 @@ namespace StoreHelperBLL
 
         public List<Product> GetAProducts()
         {
-            return _cacheService.GetOrSet("AllProductCacheKey", _unitOfWork.GetRepository<Product, int>().GetAll);
+            return _cacheService.GetOrSet("AllProductCacheKey", _unitOfWork.GetRepository<Product, long>().GetAll);
         }
 
-        public ProductDto MakePurchase(List<int> productIds)
+        public ProductDto MakePurchase(List<long> productIds)
         {
             Purchase purchase = new Purchase()
             {

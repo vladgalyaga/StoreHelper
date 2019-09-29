@@ -10,6 +10,6 @@ namespace StoreHelper.BLL.Contracts
 {
     public interface IPurchaseManager
     {
-        ProductDto MakePurchase(List<int> productIds);
+        ProductDto MakePurchase(List<long> productIds);
     }
 }

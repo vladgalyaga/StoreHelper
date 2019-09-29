@@ -8,10 +8,10 @@ using StoreHelper.Dal.Core.Interfaces.Entity;
 
 namespace StoreHelperDAL.Models
 {
-    public class Purchase : IKeyable<int>
+    public class Purchase : IKeyable<long>
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public  int Id { get; set; }
+        public long Id { get; set; }
 
 
 

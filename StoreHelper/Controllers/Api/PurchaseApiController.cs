@@ -27,7 +27,7 @@ namespace StoreHelper.Controllers.Api
         [Route("Make")]
         [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
-        public IHttpActionResult AddPurchase(IEnumerable<int> productIds)
+        public IHttpActionResult AddPurchase(IEnumerable<long> productIds)
         {
             var result = _purchaseManager.MakePurchase(productIds.ToList());
             return Ok(result);
