@@ -19,7 +19,7 @@ namespace StoreHelperBLL
         }
         public void AddProducts(params ProductDto[] products)
         {
-            var entities = products.Select(MapProduct).ToList();
+            var entities = products.Select(Mapper.Map).ToList();
             _productRepository.CreateRange(entities);
         }
 
@@ -30,7 +30,7 @@ namespace StoreHelperBLL
 
         public List<ProductDto> GetAllProtducts()
         {
-            return _productRepository.GetAll().Select(MapProduct).ToList();
+            return _productRepository.GetAll().Select(Mapper.Map).ToList();
         }
 
         public ProductDto GetProduct(long id)
@@ -40,22 +40,5 @@ namespace StoreHelperBLL
             return result;
         }
 
-        private ProductDto MapProduct(Product product)
-        {
-            return new ProductDto()
-            {
-                Id = product.Id,
-                Name = product.Name
-            };
-        }
-
-        private Product MapProduct(ProductDto product)
-        {
-            return new Product()
-            {
-                Id = product.Id,
-                Name = product.Name
-            };
-        }
     }
 }

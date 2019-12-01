@@ -130,7 +130,7 @@ namespace StoreHelperBLL
                 AllProductsCacheKey,
                 AllRercomendationCachekey
             });
-
+            GetRcomendation();
         }
 
         public class RecomendationProduct

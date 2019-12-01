@@ -11,11 +11,11 @@ using System.Web.Http;
 namespace StoreHelper.Controllers.Api
 {
     [RoutePrefix("api/Products")]
-    public class ProductsController : ApiController
+    public class ProductsApiController : ApiController
     {
         private readonly IProdustsManager _produstsManager;
 
-        public ProductsController(IProdustsManager produstsManager)
+        public ProductsApiController(IProdustsManager produstsManager)
         {
             _produstsManager = produstsManager;
         }

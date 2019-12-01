@@ -34,12 +34,14 @@ namespace StoreHelper.Controllers.Api
         }
 
         [HttpPut]
-        [Route()]
+        [Route("recomendations")]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult ReloadCache()
         {
             _purchaseManager.ReloadCache();
             return Ok();
         }
+
+
     }
 }
