@@ -22,7 +22,6 @@ namespace StoreHelper.Controllers.Api
 
         [HttpPost]
         [Route("list")]
-        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult AddProducts(IEnumerable<ProductDto> products)
         {
@@ -31,7 +30,6 @@ namespace StoreHelper.Controllers.Api
         }
 
         [HttpPost]
-        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult AddProduct(ProductDto product)
         {
@@ -40,7 +38,7 @@ namespace StoreHelper.Controllers.Api
         }
 
         [HttpGet]
-        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(IEnumerable<ProductDto>))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult GetAll()
         {
@@ -60,7 +58,6 @@ namespace StoreHelper.Controllers.Api
 
         [HttpDelete]
         [Route("{id:long}")]
-        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult Delete(long id)
         {

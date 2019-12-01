@@ -35,7 +35,6 @@ namespace StoreHelper.Controllers.Api
 
         [HttpPut]
         [Route()]
-        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult ReloadCache()
         {
