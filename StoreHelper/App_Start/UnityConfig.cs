@@ -42,11 +42,13 @@ namespace StoreHelper
         /// </remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-            container.RegisterType<ICacheService, CacheService>();
+            container.RegisterSingleton<ICacheService, CacheService>();
 
             container.RegisterType<DbContext, StoreHelperContext>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<IPurchaseManager, PurchaseSecondManager>();
+
+            container.RegisterType<IProdustsManager, ProdustsManager>();
             // NOTE: To load from web.config uncomment the line below.
             // Make sure to add a Unity.Configuration to the using statements.
             // container.LoadConfiguration();

@@ -118,9 +118,7 @@ namespace StoreHelper.Dal.Core
 
         public virtual void Create(TEntity entity)
         {
-          //  DbContext.AddEntity<TEntity, TKey>(entity);
-         //   SaveChanges();
-            DbContext.Entry(entity).State = EntityState.Added;
+            DbContext.AddEntity<TEntity, TKey>(entity);
             SaveChanges();
         }
         public virtual void CreateRange(IEnumerable<TEntity> entities)

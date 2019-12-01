@@ -22,9 +22,9 @@ namespace StoreHelper.Controllers.Api
         {
             _purchaseManager = purchaseManager;
         }
-        
+
         [HttpPost]
-        [Route("Make")]
+        [Route()]
         [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         public IHttpActionResult AddPurchase(IEnumerable<long> productIds)
@@ -32,5 +32,15 @@ namespace StoreHelper.Controllers.Api
             var result = _purchaseManager.MakePurchase(productIds.ToList());
             return Ok(result);
         }
-}
+
+        [HttpPut]
+        [Route()]
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ProductDto))]
+        [SwaggerResponse(HttpStatusCode.BadRequest)]
+        public IHttpActionResult ReloadCache()
+        {
+            _purchaseManager.ReloadCache();
+            return Ok();
+        }
+    }
 }

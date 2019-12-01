@@ -126,5 +126,10 @@ namespace StoreHelperBLL
 
             return recomendedPropucts;
         }
+
+        public void ReloadCache()
+        {
+            _cacheService.InvalidateByKey("AllProductCacheKey");
+        }
     }
 }

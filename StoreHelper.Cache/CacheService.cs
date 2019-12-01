@@ -48,7 +48,7 @@ namespace StoreHelper.ODA.Cache
             timePolicy = timePolicy ?? CacheItemTimePolicy.Default; //By default expiration timeout is set to 4 hours
             TimeSpan expiration = (timePolicy.ValidTill - DateTime.UtcNow);
 
-            var cachePolicy = new CacheItemPolicy() { AbsoluteExpiration = DateTimeOffset.Now.AddHours(expiration.TotalHours) };
+            var cachePolicy = new CacheItemPolicy() { AbsoluteExpiration = DateTimeOffset.Now.AddHours(48) };
             this.cache.Set(new CacheItem(cacheKey, value), cachePolicy);
         }
 

@@ -11,5 +11,7 @@ namespace StoreHelper.BLL.Contracts
     public interface IPurchaseManager
     {
         ProductDto MakePurchase(List<long> productIds);
+
+        void ReloadCache();
     }
 }
